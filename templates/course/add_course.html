@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<section>
+    <h2>Insert New Course</h2>
+    <form method="POST" class="course-form">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <input type="text" id="title" name="title" class="form-input" placeholder="Course Title" required />
+        </div>
+
+        <div class="form-group">
+            <textarea name="description" id="description" class="form-textarea" placeholder="Course Description"
+                rows="6"></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="duration" name="duration" class="form-input" placeholder="Course Duration In Hours"
+                required />
+        </div>
+
+        <label for="start_date" style="font-weight: bold; color: white;">Start Date</label>
+        <div class="form-group">
+            <input type="date" id="start_date" name="start_date" class="form-input" value="{{ form.start_date.value|default_if_none:'' }}" placeholder="Start Date" required />
+        </div>
+        
+        <label for="end_date" style="font-weight: bold; color: white;">End Date</label>
+        <div class="form-group">
+            <input type="date" id="end_date" name="end_date" class="form-input" value="{{ form.end_date.value|default_if_none:'' }}" placeholder="End Date" required />
+        </div>
+        
+        <br>
+        <button type="submit" class="form-button">Add </button>
+        <a style="text-decoration: none;" href="{% url 'course_list' %}" class="btn-back">
+            Back
+        </a>
+    </form>
+</section>
+{% endblock %}
+

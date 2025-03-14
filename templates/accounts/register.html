@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% block content %}
+<h2>Register</h2>
+<br>
+<form method="POST" class="register-form">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <input type="text" id="username" name="username" class="form-input" placeholder="User Name" required />
+    </div>
+
+    <div class="form-group">
+        <input type="email" id="email" name="email" class="form-input" placeholder="E-mail" required />
+    </div>
+
+    <div class="form-group">
+        <input type="password" id="password" name="password" class="form-input" placeholder="Enter Password"
+            required />
+    </div>
+    <div class="form-group">
+        <input type="password" id="re-password" name="re-password" class="form-input" placeholder="re-enter Password"
+            required />
+    </div>
+    <br>
+    <button type="submit" class="form-reg">Register</button>
+    <a style="text-decoration: none;" class="btn-back" href="{% url 'login' %}">Login </a></p>
+</form>
+{% endblock %}

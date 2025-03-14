@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+<section>
+    <h2>Add New Trainee</h2>
+    <form method="POST" class="trainee-form">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <input type="text" id="name" name="name" class="form-input" placeholder="Trainee Name" required />
+        </div>
+
+        <div class="form-group">
+            <input type="email" id="email" name="email" class="form-input" placeholder="Trainee E-mail" required />
+        </div>
+
+        <div class="form-group">
+            <input type="number" id="phone" name="phone" class="form-input" placeholder="Trainee Phone" required />
+        </div>
+
+        <div class="form-group">
+            <select id="course" name="course" class="form-input">
+                <option value="" selected>-- No Course Assigned --</option>
+                {% for course in courses %}
+                    <option value="{{ course.id }}">{{ course.title }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <br>
+        <button type="submit" class="form-button">Add </button>
+        <a style="text-decoration: none;" href="{% url 'trainee_list' %}" class="btn-back">
+            Back
+        </a>
+    </form>
+</section>
+
+{% endblock %}

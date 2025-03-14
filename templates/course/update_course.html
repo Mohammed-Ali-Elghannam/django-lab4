@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<h2>Update Course</h2>
+<form method="POST" class="course-form">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <input
+            type="text"
+            id="title"
+            name="title"
+            class="form-input"
+            required value="{{ form.title.value }}"
+        />
+   
+    </div>
+
+    <div class="form-group">
+        
+        <textarea name="description" id="description" class="form-textarea" required>
+            {{ form.description.value|default_if_none:'' }}
+        </textarea>
+    </div>
+
+    <div class="form-group">
+        <input
+            type="text"
+            id="duration"
+            name="duration"
+            class="form-input"
+            required value="{{ form.duration.value }}"
+            
+        />
+    </div>
+
+    <label for="start_date" style="color: white;font-weight: bold ;">Start Date</label>
+    <div class="form-group">
+        <input type="date" id="start_date" name="start_date" class="form-input" value="{{ form.start_date.value|default_if_none:'' }}" required />
+    </div>
+    
+    <label for="end_date" style="color: white;font-weight: bold ;">End Date</label>
+    <div class="form-group">
+        <input type="date" id="end_date" name="end_date" class="form-input" value="{{ form.end_date.value|default_if_none:'' }}" required />
+    </div>
+    <br>
+    <button type="submit" class="form-button">Update</button>
+    <a style="text-decoration: none;" href="{% url 'course_list' %}" class="btn-back">
+        Back
+    </a>
+    
+    <br>
+    <br>
+</form> 
+
+{% endblock %}
