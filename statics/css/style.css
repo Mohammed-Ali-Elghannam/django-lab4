@@ -83,7 +83,7 @@ footer {
     height: 45vh;
   }
 .trainee-form {
-  height: 45vh;
+  height: 55vh;
 }
 .course-form {
   height: 69vh;
@@ -105,9 +105,9 @@ footer {
 /* Focus effect */
 .form-input:focus,
 .form-textarea:focus {
-  border-color: #007bff;
+  border-color: #050709;
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 5px rgba(2, 7, 12, 0.5);
 }
 
 /* Textarea specific styles */
@@ -150,8 +150,9 @@ footer {
 .btn-details:hover,
 .form-btn:hover,
 .form-reg:hover {
+  border: 1px solid white;
   background: black;
-  color: wheat;
+  color: white;
 }
 .btn-back,
 .btn-edit,
@@ -160,6 +161,7 @@ footer {
 .btn-add-course {
   margin-left: 50px;
   display: inline-block;
+  border: 1px solid white;
   background-color: white;
   color: black;
   font-weight: bold;
@@ -176,11 +178,13 @@ footer {
   margin-top: 30px;
   margin-bottom: 20px;
   width: 200px;
+  border: 1px solid black;
   background-color: black;
   color: white;
 }
 .btn-add-course:hover {
-  background: rgb(116, 115, 115);
+  background-color: white;
+  color: black;
 }
 .btn-edit,
 .btn-delete,

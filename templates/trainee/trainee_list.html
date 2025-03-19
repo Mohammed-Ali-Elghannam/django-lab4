@@ -18,6 +18,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Course</th>
+            <th>Image</th>
             <th style="width: 600px;">Actions</th>
         </tr>
         {% for trainee in trainees %}
@@ -30,6 +31,13 @@
                     {{ trainee.course.title }}
                 {% else %}
                     No Course Assigned
+                {% endif %}
+            </td>
+            <td>
+                {% if trainee.image %}
+                    <img src="{{ trainee.image.url }}" alt="{{ trainee.name }}" width="50" height="50" >
+                {% else %}
+                    <p>No Image</p>
                 {% endif %}
             </td>
             <td style=" width: 600px; ;display: flex;align-items: center;justify-content: center;text-align: center;">

@@ -11,12 +11,15 @@ class TraineeForm(forms.Form):
         required=False, 
         widget=forms.Select(attrs={'class': 'form-control'})
     )
+    image = forms.ImageField(required=False, widget=forms.ClearableFileInput(attrs={'class': 'form-control'}))  # New field
+
 
 
 
 class Traineeformmodel(forms.ModelForm):
     course = forms.ModelChoiceField(queryset=Course.objects.all(), required=False , widget=forms.Select(attrs={'class': 'form-control'}) ) 
+    image = forms.ImageField(required=False, widget=forms.ClearableFileInput(attrs={'class': 'form-control'}))  # New field
 
     class Meta:
         model = Trainee
-        fields = ['name', 'email', 'phone', 'course']  
+        fields = ['name', 'email', 'phone', 'course','image']  

@@ -30,6 +30,12 @@
             </select>
         </div>
 
+        <!-- New Image Upload Field -->
+        <div class="form-group">
+            {% comment %} <label for="image">Upload Image:</label> {% endcomment %}
+            <input style="background-color: white;" type="file" id="image" name="image" class="form-input" accept="image/*" />
+        </div>
+
         <br>
         <button type="submit" class="form-button">Add </button>
         <a style="text-decoration: none;" href="{% url 'trainee_list' %}" class="btn-back">
