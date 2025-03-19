@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <h2>Update Trainee</h2>
 
-<form method="POST" class="trainee-form">
+<form method="POST" class="trainee-form" enctype="multipart/form-data">
     <br>
     {% csrf_token %}
 

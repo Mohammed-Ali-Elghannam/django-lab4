@@ -18,7 +18,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Course</th>
-            <th>Actions</th>
+            <th style="width: 600px;">Actions</th>
         </tr>
         {% for trainee in trainees %}
         <tr style="height: 40px;">
@@ -32,8 +32,12 @@
                     No Course Assigned
                 {% endif %}
             </td>
-            <td style="display: flex;align-items: center;justify-content: center;text-align: center;">
+            <td style=" width: 600px; ;display: flex;align-items: center;justify-content: center;text-align: center;">
 
+
+                <a style="text-decoration: none;" href="{% url 'trainee_detail' trainee.id %}" class="btn-details">
+                    Show Details
+                </a>
                 <a style="text-decoration: none;" href="{% url 'update_trainee' trainee.id %}" class="btn-edit">
                     Edit
                 </a>

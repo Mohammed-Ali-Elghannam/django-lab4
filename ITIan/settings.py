@@ -156,5 +156,10 @@ TEMPLATES = [
     },
 ]
 
+MEDIA_URL = '/media/'  # URL for accessing uploaded files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory for storing files
+
+
+
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'statics')]

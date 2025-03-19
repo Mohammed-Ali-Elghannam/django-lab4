@@ -147,6 +147,7 @@ footer {
 .btn-back:hover,
 .btn-delete:hover,
 .btn-edit:hover,
+.btn-details:hover,
 .form-btn:hover,
 .form-reg:hover {
   background: black;
@@ -155,6 +156,7 @@ footer {
 .btn-back,
 .btn-edit,
 .btn-delete,
+.btn-details,
 .btn-add-course {
   margin-left: 50px;
   display: inline-block;
@@ -181,9 +183,13 @@ footer {
   background: rgb(116, 115, 115);
 }
 .btn-edit,
-.btn-delete {
+.btn-delete,
+.btn-details {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.btn-details{
+  width: 150px;
 }
 
 .delete-heading {
