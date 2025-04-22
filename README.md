@@ -34,21 +34,21 @@ The ITI Management System is a web-based application designed to manage and stre
 
 ## Project Structure
 ITI-management-systemITI-management-system/
-├── manage.py
-├── iti_management/
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│   └── ...
-├── apps/
-│   ├── students/
-│   ├── instructors/
-│   ├── courses/
-│   └── ...
-├── templates/
-├── static/
-├── media/
-└── requirements.txt
+- ├── manage.py
+- ├── iti_management/
+- │   ├── settings.py
+- │   ├── urls.py
+- │   ├── wsgi.py
+- │   └── ...
+- ├── apps/
+- │   ├── students/
+- │   ├── instructors/
+- │   ├── courses/
+- │   └── ...
+- ├── templates/
+- ├── static/
+- ├── media/
+- └── requirements.txt
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
