@@ -4,13 +4,6 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <h2>List of Trainees</h2>
 
-<div style="align-items: center;justify-content: center ;width: 100%;display: flex;">
-
-    <a style="text-decoration: none;" href="{% url 'add_trainee' %}" class="btn-add-course">
-        Add New Trainee
-    </a>
-
-</div>
 <div style="align-items: center;text-align: center; justify-content: center ; background: rgb(43, 43, 43);">
     <table border="1" style="width: 100%;border-color: aliceblue;border-collapse: collapse; color: aliceblue;">
         <tr style="height: 40px;">
@@ -58,4 +51,13 @@
         {% endfor %}
     </table>
 </div>
+
+<div style="width: 100%;display: flex;">
+
+    <a style="text-decoration: none;" href="{% url 'add_trainee' %}" class="btn-add-course">
+        Add New Trainee
+    </a>
+
+</div>
+
 {% endblock %}
